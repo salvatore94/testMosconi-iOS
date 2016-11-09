@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testMosconi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uBS-cD-cry">
+                                <rect key="frame" x="1.5" y="161" width="318.5" height="216"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rRW-N5-wgV">
+                                        <rect key="frame" x="0.0" y="0.0" width="318.5" height="216"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-wE-4or">
+                                                <rect key="frame" x="0.0" y="0.0" width="318.5" height="216"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0Z-U7-IJf">
+                                <rect key="frame" x="2" y="608" width="375" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="asZ-Xp-zff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Riproduci"/>
+                                <connections>
+                                    <action selector="riproduci:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nx-83-c8M"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ritratto" translatesAutoresizingMaskIntoConstraints="NO" id="u8m-mZ-Kku">
+                                <rect key="frame" x="16" y="20" width="360" height="276"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfe-V5-mI5">
+                                <rect key="frame" x="-1" y="304" width="376" height="296"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="cEG-8n-pt4"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="tgq-00-74i"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="u8m-mZ-Kku" firstAttribute="leading" secondItem="uBS-cD-cry" secondAttribute="leading" constant="14.5" id="48S-cX-IGD"/>
+                            <constraint firstItem="u8m-mZ-Kku" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="D8V-hp-ch2"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="leading" secondItem="u8m-mZ-Kku" secondAttribute="leading" constant="-17" id="OZV-le-U1h"/>
+                            <constraint firstItem="e0Z-U7-IJf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QZx-Er-a0X"/>
+                            <constraint firstItem="u8m-mZ-Kku" firstAttribute="leading" secondItem="e0Z-U7-IJf" secondAttribute="leading" constant="14" id="WgR-do-xWa"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="top" secondItem="uBS-cD-cry" secondAttribute="top" constant="143" id="Xe8-hw-SyW"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="304" id="bjO-HG-nQ3"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="top" secondItem="u8m-mZ-Kku" secondAttribute="bottom" constant="8" id="cfF-oD-Muv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uBS-cD-cry" secondAttribute="trailing" constant="39" id="dGa-Zc-UaX"/>
+                            <constraint firstItem="u8m-mZ-Kku" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-15" id="ftb-P9-owB"/>
+                            <constraint firstItem="e0Z-U7-IJf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gQ9-Fu-lL0"/>
+                            <constraint firstItem="u8m-mZ-Kku" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-15" id="rXL-6T-Gzd"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="sCr-uO-lV2"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="bottom" secondItem="uBS-cD-cry" secondAttribute="bottom" constant="223" id="sg5-L1-Hh4"/>
+                            <constraint firstItem="wfe-V5-mI5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="1" id="uD2-dU-TmL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="wfe-V5-mI5" id="zrK-RS-BjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ritratto" width="700" height="500"/>
+    </resources>
+</document>
