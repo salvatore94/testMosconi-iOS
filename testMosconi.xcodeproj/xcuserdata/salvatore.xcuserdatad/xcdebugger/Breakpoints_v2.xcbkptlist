@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testMosconi/ViewController.swift"
-            timestampString = "500481864.52859"
+            timestampString = "504800545.194151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "apriMP()"
-            landmarkType = "7">
+            endingLineNumber = "269">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
